@@ -11,6 +11,7 @@ if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
 
 # --- Windows Tools via Scoop ---
 $windowsApps = @(
+    "cursor",
     "vscode",              # Visual Studio Code
     "powertoys",           # Windows productivity
     "docker",              # Docker Desktop
@@ -18,7 +19,6 @@ $windowsApps = @(
     "azure-storage-explorer",
     "git",                 # Git
     "gh",                  # GitHub CLI
-    "postman",             # API testing
     "insomnia",            # API client (alternative to Postman)
     "dbeaver",             # DB client
     "azure-data-studio"    # Data & query tool
@@ -67,9 +67,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Install dbt-core + dbt-azure adapter
-uv tool install dbt-core
-uv tool install dbt-sqlserver
-uv tool install dbt-azure
+# uv tool install dbt-core
+# uv tool install dbt-sqlserver
+# uv tool install dbt-azure
 
 # Azure CLI (Linux side)
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
